@@ -43,10 +43,10 @@ No installation required! Just download the script:
 
 ```bash
 # Download the script
-wget https://raw.githubusercontent.com/pentest/open_api/main/scripts/dotnet-openapi-generator.js
+wget https://raw.githubusercontent.com/CrazyBearier/autoGen_OpenAPI/main/dotnet-openapi-generator.js
 
 # Or copy the file directly
-cp scripts/dotnet-openapi-generator.js /your/project/
+cp dotnet-openapi-generator.js /your/project/
 ```
 
 ## Usage
@@ -343,7 +343,7 @@ jobs:
       
       - name: Generate OpenAPI Spec
         run: |
-          wget https://raw.githubusercontent.com/pentest/open_api/main/scripts/dotnet-openapi-generator.js
+          wget https://raw.githubusercontent.com/CrazyBearier/autoGen_OpenAPI/main/dotnet-openapi-generator.js
           node dotnet-openapi-generator.js ./
       
       - name: Upload Documentation
@@ -369,7 +369,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    wget https://raw.githubusercontent.com/pentest/open_api/main/scripts/dotnet-openapi-generator.js
+    wget https://raw.githubusercontent.com/CrazyBearier/autoGen_OpenAPI/main/dotnet-openapi-generator.js
     node dotnet-openapi-generator.js ./
   displayName: 'Generate OpenAPI Documentation'
 

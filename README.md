@@ -57,10 +57,10 @@ No installation required! Just download the script:
 
 ```bash
 # Download the script
-wget https://raw.githubusercontent.com/pentest/open_api/main/scripts/universal-swagger-generator.js
+wget https://raw.githubusercontent.com/CrazyBearier/autoGen_OpenAPI/main/universal-swagger-generator.js
 
 # Or copy the file directly
-cp scripts/universal-swagger-generator.js /your/project/
+cp universal-swagger-generator.js /your/project/
 ```
 
 ## Usage
@@ -127,7 +127,7 @@ jobs:
       
       - name: Generate OpenAPI Spec
         run: |
-          wget https://raw.githubusercontent.com/pentest/open_api/main/scripts/universal-swagger-generator.js
+          wget https://raw.githubusercontent.com/CrazyBearier/autoGen_OpenAPI/main/universal-swagger-generator.js
           node universal-swagger-generator.js ./
       
       - name: Upload Documentation
@@ -144,7 +144,7 @@ generate-docs:
   stage: build
   image: node:18-alpine
   script:
-    - wget https://raw.githubusercontent.com/pentest/open_api/main/scripts/universal-swagger-generator.js
+    - wget https://raw.githubusercontent.com/CrazyBearier/autoGen_OpenAPI/main/universal-swagger-generator.js
     - node universal-swagger-generator.js ./
   artifacts:
     paths:
@@ -161,7 +161,7 @@ pipeline {
         stage('Generate API Docs') {
             steps {
                 sh '''
-                    wget https://raw.githubusercontent.com/pentest/open_api/main/scripts/universal-swagger-generator.js
+                    wget https://raw.githubusercontent.com/CrazyBearier/autoGen_OpenAPI/main/universal-swagger-generator.js
                     node universal-swagger-generator.js ./
                 '''
                 archiveArtifacts artifacts: 'swagger-output-*.json'
